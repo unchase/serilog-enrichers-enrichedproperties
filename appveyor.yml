@@ -3,9 +3,6 @@ skip_tags: true
 image: Visual Studio 2017
 platform: Any CPU
 configuration: Release
-nuget:
-  account_feed: true
-  project_feed: true
 install:
   - ps: mkdir -Force ".\build\" | Out-Null
 build_script:
