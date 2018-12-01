@@ -22,7 +22,9 @@ deploy:
   api_key:
     secure: UJc0HVrXjjNdua/8khUqCyE90DCZn1vbvSyBMhVFm1yoZFNaVu8FysJWYsgU2I0K
   skip_symbols: true
-  artifact: '*.nupkg'
+  artifact: /Serilog.*\.nupkg/
+  on:
+    nugetVersion: 1.0.{build}
 notifications:
 - provider: Email
   to:
