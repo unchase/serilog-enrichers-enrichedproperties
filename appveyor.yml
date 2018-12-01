@@ -13,7 +13,7 @@ artifacts:
 deploy:
 - provider: GitHub
   auth_token:
-    secure: 6bcab7cc94d17813f78b8f98d5efcee6fb20c7b4
+    secure: b1c5c2f5c7db494cc94d86ede531ec79414a4dbc
   artifact: /Serilog.*\.nupkg/
   tag: v$(appveyor_build_version)
   on:
