@@ -10,7 +10,7 @@
     <PackageTags>Serilog Enricher C# .net Core</PackageTags>
     <RepositoryUrl>https://github.com/unchase/serilog-enrichers-enrichedproperties</RepositoryUrl>
     <NeutralLanguage>en</NeutralLanguage>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
