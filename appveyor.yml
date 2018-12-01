@@ -24,7 +24,7 @@ deploy:
   skip_symbols: true
   artifact: /Serilog.*\.nupkg/
   on:
-    nugetVersion: 1.0.{build}
+    version: v$(appveyor_build_version)
 notifications:
 - provider: Email
   to:
