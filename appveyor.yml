@@ -1,20 +1,27 @@
-version: '{build}'
-skip_tags: true
+version: 1.0.{build}
 image: Visual Studio 2017
-configuration: Release
-install:
-  - ps: mkdir -Force ".\build\" | Out-Null
-  
+platform: Any CPU
 build_script:
-- ps: ./Build.ps1
+- ps: '& .\Build.ps1'
 test: off
-artifacts:
-- path: artifacts/Serilog.*.nupkg
 deploy:
 - provider: GitHub
-  auth_token:
-    secure: b1c5c2f5c7db494cc94d86ede531ec79414a4dbc
-  artifact: /Serilog.*\.nupkg/
   tag: v$(appveyor_build_version)
-  on:
-    branch: master
+  release: Serilog.Enrichers.EnrichedProperties-v$(appveyor_build_version)
+  auth_token:
+    secure: 5YjB5tKbw0Z/mnSTKxo3WLD9TWuyGpGPhaNlSTA+cFA1oORUk46i6tPuyvekHaS9
+  repository: unchase/serilog-enrichers-enrichedproperties
+  artifact: /Serilog.*\.nupkg/
+- provider: NuGet
+  api_key:
+    secure: UJc0HVrXjjNdua/8khUqCyE90DCZn1vbvSyBMhVFm1yoZFNaVu8FysJWYsgU2I0K
+  skip_symbols: true
+notifications:
+- provider: Email
+  to:
+  - spiritkola@hotmail.com
+  subject: Serilog.Enrichers.EnrichedProperties
+  message: Build success
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
