@@ -22,6 +22,7 @@ deploy:
   api_key:
     secure: UJc0HVrXjjNdua/8khUqCyE90DCZn1vbvSyBMhVFm1yoZFNaVu8FysJWYsgU2I0K
   skip_symbols: true
+  artifact: '*.nupkg'
 notifications:
 - provider: Email
   to:
