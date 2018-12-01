@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Unchase</Authors>
+    <Description>Enriches Serilog events with information from logger properties that was enriched earlier.</Description>
+    <Copyright>Copyright 2018 Unchase</Copyright>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageTags>Serilog Enricher C# .net Core</PackageTags>
+    <RepositoryUrl>https://github.com/unchase/serilog-enrichers-enrichedproperties</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.7.1" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+  </ItemGroup>
+
+</Project>

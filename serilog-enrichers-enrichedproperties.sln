@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82DDEB1B-9181-4D7E-BB8C-378156E4D60B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Enrichers.EnrichedProperties", "src\Serilog.Enrichers.EnrichedProperties\Serilog.Enrichers.EnrichedProperties.csproj", "{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9C915E00-6E6B-4E4F-BEC5-63930C7CB0A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.EnrichedProperties.Tests", "test\Serilog.Enrichers.EnrichedProperties.Tests\Serilog.Enrichers.EnrichedProperties.Tests.csproj", "{FFABB125-0F0C-4D40-969D-DAF4675B3EFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{816DC36B-3C0E-432E-B3F0-176B469A359F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFABB125-0F0C-4D40-969D-DAF4675B3EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFABB125-0F0C-4D40-969D-DAF4675B3EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFABB125-0F0C-4D40-969D-DAF4675B3EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFABB125-0F0C-4D40-969D-DAF4675B3EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B4FC5C3-D831-4C6E-9126-B08FD3BC8085} = {82DDEB1B-9181-4D7E-BB8C-378156E4D60B}
+		{FFABB125-0F0C-4D40-969D-DAF4675B3EFE} = {9C915E00-6E6B-4E4F-BEC5-63930C7CB0A9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFE41B87-DA9C-4760-83E8-D5BC72411103}
+	EndGlobalSection
+EndGlobal
