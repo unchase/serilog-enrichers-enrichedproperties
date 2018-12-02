@@ -32,9 +32,7 @@ deploy:
 notifications:
 - provider: Email
   to:
-  - spiritkola@hotmail.com
-  subject: Serilog.Enrichers.EnrichedProperties
-  message: Build status changed
-  on_build_success: false
-  on_build_failure: false
+    - spiritkola@hotmail.com
+  subject: 'Serilog.Enrichers.EnrichedProperties Build {{status}}'
+  message: "{{message}}, {{commitId}}, ..."
   on_build_status_changed: true
