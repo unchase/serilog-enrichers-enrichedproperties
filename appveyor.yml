@@ -7,9 +7,6 @@ install:
   - ps: mkdir -Force ".\build\" | Out-Null
 build_script:
 - ps: '& .\Build.ps1'
-build:
-  publish_nuget: false
-  publish_nuget_symbols: false
 test: off
 artifacts:
 - path: artifacts/Serilog.*.nupkg
