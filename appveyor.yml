@@ -32,3 +32,9 @@ notifications:
   on_build_success: false
   on_build_failure: false
   on_build_status_changed: true
+ artifacts:
+  # pushing a single file
+  - path: Serilog.Enrichers.EnrichedProperties.zip
+
+  # pushing entire folder as a zip archive
+  - path: logs
