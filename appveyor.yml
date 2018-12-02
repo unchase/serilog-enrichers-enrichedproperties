@@ -23,6 +23,8 @@ deploy:
     secure: UJc0HVrXjjNdua/8khUqCyE90DCZn1vbvSyBMhVFm1yoZFNaVu8FysJWYsgU2I0K
   skip_symbols: true
   artifact: /Serilog.*\.nupkg/
+  on:
+    appveyor_repo_tag: true
 notifications:
 - provider: Email
   to:
