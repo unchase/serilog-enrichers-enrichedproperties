@@ -2,6 +2,12 @@ version: 1.0.{build}
 skip_tags: true
 image: Visual Studio 2017
 platform: Any CPU
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 configuration: Release
 install:
   - ps: mkdir -Force ".\build\" | Out-Null
@@ -33,6 +39,6 @@ notifications:
 - provider: Email
   to:
     - spiritkola@hotmail.com
-  subject: 'Serilog.Enrichers.EnrichedProperties Build {{status}}'
-  message: "{{message}}, {{commitId}}, ..."
+  subject: 'Serilog.Enrichers.EnrichedProperties - Build {{status}}'
+  message: "Building complete, commitId = {{commitId}}"
   on_build_status_changed: true
