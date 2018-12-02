@@ -2,7 +2,7 @@
 
 Enriches Serilog events with information from logger properties that was enriched earlier.
  
-[![Build status](https://ci.appveyor.com/api/projects/status/3wuxneqb8i40wi6t?svg=true)](https://ci.appveyor.com/project/unchase/serilog-enrichers-enrichedproperties) [![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.EnrichedProperties.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.EnrichedProperties/)
+[![Build status](https://ci.appveyor.com/api/projects/status/3wuxneqb8i40wi6t?svg=true)](https://ci.appveyor.com/project/unchase/serilog-enrichers-enrichedproperties) [![GitHub version](https://badge.fury.io/gh/unchase%2Fserilog-enrichers-enrichedproperties.svg)](https://badge.fury.io/gh/unchase%2Fserilog-enrichers-enrichedproperties) [![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.EnrichedProperties.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.EnrichedProperties/)
 
 To use the enricher, first install the NuGet package:
 
