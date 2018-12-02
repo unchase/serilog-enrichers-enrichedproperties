@@ -10,7 +10,6 @@ build_script:
 build:
   publish_nuget: false
   publish_nuget_symbols: false
-  include_nuget_references: false
 test: off
 artifacts:
 - path: artifacts/Serilog.*.nupkg
