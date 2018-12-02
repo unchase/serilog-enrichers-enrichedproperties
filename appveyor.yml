@@ -9,9 +9,6 @@ build_script:
 - ps: '& .\Build.ps1'
 test: off
 artifacts:
-- path: Serilog.Enrichers.EnrichedProperties.zip
-# pushing entire folder as a zip archive
-- path: logs
 - path: artifacts/Serilog.*.nupkg
 deploy:
 - provider: GitHub
