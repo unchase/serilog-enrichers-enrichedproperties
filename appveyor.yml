@@ -1,5 +1,7 @@
 version: 1.0.{build}
-skip_tags: true
+pull_requests:
+  do_not_increment_build_number: true
+#skip_tags: true
 image: Visual Studio 2017
 platform: Any CPU
 assembly_info:
@@ -11,6 +13,8 @@ assembly_info:
 configuration: Release
 install:
   - ps: mkdir -Force ".\build\" | Out-Null
+before_build:
+- ps: nuget restore
 build_script:
 - ps: '& .\Build.ps1'
 test: off
