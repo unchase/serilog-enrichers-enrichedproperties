@@ -7,6 +7,10 @@ install:
   - ps: mkdir -Force ".\build\" | Out-Null
 build_script:
 - ps: '& .\Build.ps1'
+build:
+  publish_nuget: false
+  publish_nuget_symbols: false
+  include_nuget_references: false
 test: off
 artifacts:
 - path: artifacts/Serilog.*.nupkg
@@ -24,6 +28,7 @@ deploy:
   skip_symbols: true
   artifact: /Serilog.*\.nupkg/
   on:
+    branch: master
     appveyor_repo_tag: true
 notifications:
 - provider: Email
