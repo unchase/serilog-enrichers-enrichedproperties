@@ -4,7 +4,7 @@
 
 Enriches Serilog events with information from logger properties that was enriched earlier.
  
-[![GitHub release](https://img.shields.io/github/release/unchase/serilog-enrichers-enrichedproperties.svg)](https://github.com/unchase/serilog-enrichers-enrichedproperties/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/unchase/serilog-enrichers-enrichedproperties.svg)](https://github.com/unchase/serilog-enrichers-enrichedproperties/releases/latest) 
+[![GitHub release](https://img.shields.io/github/release/unchase/serilog-enrichers-enrichedproperties.svg)](https://github.com/unchase/serilog-enrichers-enrichedproperties/releases/latest) [![Github Releases](https://img.shields.io/github/downloads/unchase/serilog-enrichers-enrichedproperties/total.svg)](https://github.com/unchase/serilog-enrichers-enrichedproperties/releases/latest) [![GitHub Release Date](https://img.shields.io/github/release-date/unchase/serilog-enrichers-enrichedproperties.svg)](https://github.com/unchase/serilog-enrichers-enrichedproperties/releases/latest) 
 
 Apply the enricher to your `LoggerConfiguration` with formated, for example, the [console sink](https://github.com/serilog/serilog-sinks-console), the [file sink](https://github.com/serilog/serilog-sinks-file) or the [email sink](https://github.com/serilog/serilog-sinks-email) etc. `outputTemplate` configuration parameter:
 
