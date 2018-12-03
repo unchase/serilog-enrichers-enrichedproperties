@@ -12,17 +12,40 @@ To use the enricher, first install the NuGet package:
 Install-Package Serilog.Enrichers.EnrichedProperties
 ```
 
-Then, apply the enricher to you `LoggerConfiguration`:
+Then, apply the enricher to you `LoggerConfiguration` with formated, for example, the [console sink](https://github.com/serilog/serilog-sinks-console), the [file sink](https://github.com/serilog/serilog-sinks-file) or the [email sink](https://github.com/serilog/serilog-sinks-email) etc. `outputTemplate` configuration parameter:
 
 ```csharp
 Log.Logger = new LoggerConfiguration()
+    .Enrich.WithProperty("Test property", "Added") // for example
     .Enrich.With... // ... other Enrichers here
     .Enrich.WithEnrichedProperties()
     // ...other configuration...
+    .WriteTo.Console(outputTemplate:
+        "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}{NewLine}Enriched properties:{NewLine}{EnrichedProperties}")
+    .WriteTo.File("log.txt", outputTemplate: 
+        "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}{NewLine}Enriched properties:{NewLine}{EnrichedProperties}")
+    .WriteTo.Email(outputTemplate:
+        "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}{NewLine}Enriched properties:{NewLine}{EnrichedProperties}",
+        fromEmail: "app@example.com",
+        toEmail: "support@example.com",
+        mailServer: "smtp.example.com")
     .CreateLogger();
 ```
 
+Where built-in the enricher property is `EnrichedProperties` in output templates.
+
 The `WithEnrichedProperties()` enricher will add properties from logger that was enriched earlier to produced events.
+
+#
+
+For example, the output text in file `log.txt` will be:
+```
+[23:12:28 INF] Has an EnrichedProperties property with properties that was enriched earlier
+
+Enriched properties:
+Test property: "Added"
+```
+
 
 ### Included enrichers
 
