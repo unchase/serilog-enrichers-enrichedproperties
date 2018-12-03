@@ -15,6 +15,7 @@ dotnet_csproj:
 build:
   publish_nuget: true
   include_nuget_references: true
+  verbosity: minimal
 configuration: Release
 install:
   - ps: mkdir -Force ".\build\" | Out-Null
