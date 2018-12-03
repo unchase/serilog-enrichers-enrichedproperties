@@ -12,7 +12,7 @@ To use the enricher, first install the NuGet package:
 Install-Package Serilog.Enrichers.EnrichedProperties
 ```
 
-Then, apply the enricher to you `LoggerConfiguration` with formated, for example, the [console sink](https://github.com/serilog/serilog-sinks-console), the [file sink](https://github.com/serilog/serilog-sinks-file) or the [email sink](https://github.com/serilog/serilog-sinks-email) etc. `outputTemplate` configuration parameter:
+Then, apply the enricher to your `LoggerConfiguration` with formated, for example, the [console sink](https://github.com/serilog/serilog-sinks-console), the [file sink](https://github.com/serilog/serilog-sinks-file) or the [email sink](https://github.com/serilog/serilog-sinks-email) etc. `outputTemplate` configuration parameter:
 
 ```csharp
 Log.Logger = new LoggerConfiguration()
