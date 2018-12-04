@@ -13,6 +13,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryType>Github</RepositoryType>
     <Version>1.0.0</Version>
+    <DocumentationMarkdownURL>assets/README.md</DocumentationMarkdownURL>
   </PropertyGroup>
 
   <ItemGroup>
