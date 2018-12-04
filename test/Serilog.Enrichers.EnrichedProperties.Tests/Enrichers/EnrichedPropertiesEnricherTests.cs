@@ -7,7 +7,7 @@ namespace Serilog.Tests.Enrichers
 {
     public class EnrichedPropertiesEnricherTests
     {
-        [Fact]
+        [Fact, Trait("Category", "Main")]
         public void EnrichedPropertiesEnricherIsApplied()
         {
             // Arrange
@@ -26,7 +26,7 @@ namespace Serilog.Tests.Enrichers
             Assert.NotEmpty((string)evt.Properties["EnrichedProperties"].LiteralValue());
         }
 
-        [Fact]
+        [Fact, Trait("Category", "Sinks")]
         public void EnrichedPropertiesEnricherWriteToFileIsApplied()
         {
             // Arrange

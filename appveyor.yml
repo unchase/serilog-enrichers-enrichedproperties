@@ -23,7 +23,10 @@ before_build:
 - ps: nuget restore
 build_script:
 - ps: '& .\Build.ps1'
-test: off
+test:
+  categories:
+    - Main
+    - Sinks
 artifacts:
 - path: artifacts/Serilog.*.nupkg
 deploy:
