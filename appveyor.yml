@@ -14,9 +14,8 @@ dotnet_csproj:
   informational_version: '{version}'
 build:
   verbosity: minimal
-after_build:
-  publish_nuget: true
-  include_nuget_references: true
+after_test:
+  - ps: '& .\pack.ps1'
 configuration: Release
 install:
   - ps: mkdir -Force ".\build\" | Out-Null
